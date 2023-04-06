@@ -28,6 +28,7 @@ OBJS = \
 	vectors.o\
 	vm.o\
 	sys_fibonacci.o\
+	sys_most_callee.o\
 
 # Cross-compiling (e.g., on Mac OS X)
 # TOOLPREFIX = i386-jos-elf
@@ -184,6 +185,7 @@ UPROGS=\
 	_zombie\
 	_test2\
 	_find_fibonacci_number\
+	_find_most_callee\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)

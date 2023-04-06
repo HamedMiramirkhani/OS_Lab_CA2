@@ -90,6 +90,7 @@ sys_uptime(void)
   return xticks;
 }
 
+
 int
 sys_get_alive_children_count(void)
 {

@@ -151,6 +151,11 @@ userinit(void)
   p->state = RUNNABLE;
 
   release(&ptable.lock);
+
+  //init the count_calls[]
+  for(int i = 0; i < sizeof(p->count_calls); i++) {
+    p->count_calls[i] = 0;
+  }
 }
 
 // Grow current process's memory by n bytes.
