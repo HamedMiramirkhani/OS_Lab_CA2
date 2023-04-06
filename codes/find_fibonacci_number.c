@@ -1,7 +1,7 @@
 #include "types.h"
 #include "user.h"
 
-int use_ebx(int number) {
+int call_find_fibonacci_number(int number) {
     int previous_ebx;
 
     //First Save current ebx in previous_ebx 
@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
 
     int index_fibonacci_num = atoi(argv[1]);
     // Save input in ebx (use register for save input)
-    int fibonacci_num = use_ebx(index_fibonacci_num);
+    int fibonacci_num = call_find_fibonacci_number(index_fibonacci_num);
     if (fibonacci_num == -1) 
         printf(2, "Number should be greater than 0 for example: 1, 2, 3, ...\n");
     else 

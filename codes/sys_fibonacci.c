@@ -5,18 +5,18 @@
 #include "mmu.h"
 #include "proc.h"
 
-static int fibonacci_number(int n) {
+static int fibonacci_number(int index) {
     int n1 = 0;
     int n2 = 1;
     int n3 = 0;
-    if (n <= 0) 
+    if (index <= 0) 
         return -1;
-    else if (n == 1)
+    else if (index == 1)
         return n1;
-    else if (n == 2)
+    else if (index == 2)
         return n2;
     else {
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i < index; i++) {
             n3 = n1 + n2;
             n1 = n2;
             n2 = n3;
