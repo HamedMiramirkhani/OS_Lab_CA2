@@ -103,6 +103,9 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
+// extern int sys_find_most_callee(void);
+extern int sys_get_alive_children_count(void);
+// extern int sys_kill_first_child_process(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -126,6 +129,9 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+// [SYS_find_most_callee]   sys_find_most_callee,
+[SYS_get_alive_children_count]   sys_get_alive_children_count,
+// [SYS_kill_first_child_process]   sys_kill_first_child_process,
 };
 
 void

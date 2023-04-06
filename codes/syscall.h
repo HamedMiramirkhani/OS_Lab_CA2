@@ -20,3 +20,6 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+// #define SYS_find_most_callee  21
+#define SYS_get_alive_children_count  22
+// #define SYS_kill_first_child_process  23

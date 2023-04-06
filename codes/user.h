@@ -23,6 +23,8 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int get_alive_children_count(int);
+
 
 // ulib.c
 int stat(const char*, struct stat*);

@@ -532,3 +532,20 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+int
+get_alive_children_count(int parent_pid)
+{
+  struct proc *p;
+  int alive_children_count = 0;
+
+  acquire(&ptable.lock);
+  for(p = ptable.proc; p < &ptable.proc[NPROC]; p++) 
+  {
+    if (p->parent->pid == parent_pid && p->killed == 0)
+      alive_children_count += 1;
+  }
+  release(&ptable.lock);
+
+  return alive_children_count;
+}
