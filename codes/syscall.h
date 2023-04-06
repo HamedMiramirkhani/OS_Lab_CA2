@@ -20,7 +20,7 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
-#define SYS_get_alive_children_count  22
-// #define SYS_kill_first_child_process  23
-#define SYS_find_fibonacci_number 24
-// #define SYS_find_most_callee  25
+#define SYS_find_fibonacci_number 22
+// #define SYS_find_most_callee  23
+#define SYS_get_alive_children_count  24
+// #define SYS_kill_first_child_process  25
