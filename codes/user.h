@@ -24,6 +24,7 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 int get_alive_children_count(int);
+int find_fibonacci_number(void);
 
 
 // ulib.c
