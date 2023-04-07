@@ -5,18 +5,19 @@
 #include "mmu.h"
 #include "proc.h"
 
-static int most_callee(int *counts) {
-    int most_callee = 0;
-    int index_most_callee;
-    for (int i = 1; i < sizeof(counts); i++) {
-        if (counts[i] > most_callee) {
-            most_callee = counts[i];
-            index_most_callee = i;
+static int find_index_maximum(int *counts, int num) {
+    int maximum = 0;
+    int index_max = 0;
+    for (int i = 1; i < num; i++) {
+        //cprintf("%d\n", counts[i]);
+        if (counts[i] >= maximum) {
+            maximum = counts[i];
+            index_max = i;
         }
     }
-    return index_most_callee;
+    return index_max;
 }
 
 int sys_find_most_callee(void) {
-    return most_callee(myproc()->count_calls);
+    return find_index_maximum(myproc()->count_calls, sizeof(myproc()->count_calls) / sizeof(myproc()->count_calls[0]));
 }

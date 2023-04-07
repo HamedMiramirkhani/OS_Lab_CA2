@@ -183,9 +183,9 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
-	_test2\
 	_find_fibonacci_number\
 	_find_most_callee\
+	_test2\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)

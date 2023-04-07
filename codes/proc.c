@@ -153,7 +153,8 @@ userinit(void)
   release(&ptable.lock);
 
   //init the count_calls[]
-  for(int i = 0; i < sizeof(p->count_calls); i++) {
+  p->count_calls[0] = 0;
+  for(int i = 1; i < sizeof(p->count_calls) / sizeof(p->count_calls[0]); i++) {
     p->count_calls[i] = 0;
   }
 }
