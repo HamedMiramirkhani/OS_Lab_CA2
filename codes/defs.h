@@ -121,7 +121,7 @@ int             wait(void);
 void            wakeup(void*);
 void            yield(void);
 int             get_alive_children_count(int);
-
+void            kill_first_child_process(int);
 
 // swtch.S
 void            swtch(struct context**, struct context*);

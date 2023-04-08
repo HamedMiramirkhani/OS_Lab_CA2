@@ -555,3 +555,23 @@ get_alive_children_count(int parent_pid)
 
   return alive_children_count;
 }
+
+void
+kill_first_child_process(int parent_pid)
+{
+  struct proc *p;
+  cprintf("{\n");
+  // acquire(&ptable.lock);
+  for(p = ptable.proc; p < &ptable.proc[NPROC]; p++) 
+  {
+    if (p->parent->pid == parent_pid && p->killed==0)
+    {
+      cprintf("   first alive child PID = %d\n", p->pid);
+      cprintf("   kill(%d)\n", p->pid);
+      kill(p->pid);
+      break;
+    }
+  }
+  // release(&ptable.lock);
+  cprintf("}\n");
+}
