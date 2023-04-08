@@ -99,3 +99,14 @@ sys_get_alive_children_count(void)
     return -1;
   return get_alive_children_count(pid);
 }
+
+int
+sys_kill_first_child_process(void)
+{
+  int pid;
+  if(argint(0, &pid) < 0)
+    return -1;
+    
+  kill_first_child_process(pid);
+  return 1;
+}

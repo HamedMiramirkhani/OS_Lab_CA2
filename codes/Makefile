@@ -183,9 +183,10 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
-	_find_fibonacci_number\
-	_find_most_callee\
-	_test2\
+	_test_find_fibonacci_number\
+	_test_find_most_caller\
+	_test_get_alive_children_count\
+	_test_kill_first_child_process\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
@@ -255,7 +256,10 @@ qemu-nox-gdb: fs.img xv6.img .gdbinit
 EXTRA=\
 	mkfs.c ulib.c user.h cat.c echo.c forktest.c grep.c kill.c\
 	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
-	test2.c\
+	test_find_fibonacci_number.c\
+	test_find_most_caller.c\
+	test_get_alive_children_count.c\
+	test_kill_first_child_process.c\
 	printf.c umalloc.c\
 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
 	.gdbinit.tmpl gdbutil\
