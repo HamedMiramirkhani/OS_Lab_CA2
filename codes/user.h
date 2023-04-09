@@ -24,7 +24,7 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 int find_fibonacci_number(void);
-int find_most_callee(void);
+int find_most_caller(void);
 int get_alive_children_count(int);
 void kill_first_child_process(int);
 // ulib.c

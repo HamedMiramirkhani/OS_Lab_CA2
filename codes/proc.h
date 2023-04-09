@@ -60,7 +60,7 @@ struct proc
   struct file *ofile[NOFILE]; // Open files
   struct inode *cwd;          // Current directory
   char name[16];              // Process name (debugging)
-  int count_calls[26];        // for find_most_callee
+  int count_calls[26];        // for find_most_caller
 };
 
 // Process memory is laid out contiguously, low addresses first:

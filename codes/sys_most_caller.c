@@ -18,6 +18,6 @@ static int find_index_maximum(int *counts, int num) {
     return index_max;
 }
 
-int sys_find_most_callee(void) {
+int sys_find_most_caller(void) {
     return find_index_maximum(myproc()->count_calls, sizeof(myproc()->count_calls) / sizeof(myproc()->count_calls[0]));
 }

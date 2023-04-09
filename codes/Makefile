@@ -28,7 +28,7 @@ OBJS = \
 	vectors.o\
 	vm.o\
 	sys_fibonacci.o\
-	sys_most_callee.o\
+	sys_most_caller.o\
 
 # Cross-compiling (e.g., on Mac OS X)
 # TOOLPREFIX = i386-jos-elf
