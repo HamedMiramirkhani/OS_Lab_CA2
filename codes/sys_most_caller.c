@@ -9,7 +9,7 @@ static int find_index_maximum(int *counts, int num) {
     int maximum = 0;
     int index_max = 0;
     for (int i = 1; i < num; i++) {
-        //cprintf("%d\n", counts[i]);
+        //cprintf("%d: %d\n",i , counts[i]);
         if (counts[i] >= maximum) {
             maximum = counts[i];
             index_max = i;
